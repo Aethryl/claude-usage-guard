@@ -1,0 +1,5 @@
+{
+  "name": "claude-usage-guard",
+  "owner": { "name": "Aethryl" },
+  "plugins": [{ "name": "usage-guard", "source": "./" }]
+}
