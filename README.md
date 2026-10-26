@@ -14,10 +14,12 @@ window has reset, the guard lets everything through.
 | Command | Effect |
 |---|---|
 | `/usage-cap` | Show the cap, on/off state and current weekly usage |
-| `/usage-cap 95` | Set the cap to 95 % (any 1-100) |
+| `/usage-cap 95` | Set the cap to 95 % (any 1-100) and turn the guard on |
 | `/usage-cap off` | Turn the guard off |
 | `/usage-cap on` | Turn it back on |
 | `/usage-cap reset` | Back to the default cap (84 %) and on |
+| `/usage-cap exempt` | Never block this project (its root and everything under it), whatever the cap |
+| `/usage-cap unexempt` | Remove this project's exemption |
 
 Slash commands are not tool calls, so `/usage-cap` works even while the guard
 is blocking. Settings are kept in the plugin's own store: they apply on the
