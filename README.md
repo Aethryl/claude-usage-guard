@@ -1,6 +1,8 @@
 <div align="center">
 
-# 🛑 usage-guard
+<img alt="usage-guard: a gauge with its needle pinned at the cap" src="assets/usage-guard.svg" width="240">
+
+# usage-guard
 
 **A weekly usage cap for Claude Code.**
 Stops your agents from spending the rest of the week's Claude plan while you're not watching.
@@ -25,7 +27,7 @@ of the week.
      guard off with /usage-cap off.
 ```
 
-## ✨ Features
+## Features
 
 - **One number to set.** Pick a percentage of your weekly limit; below it nothing changes.
 - **Works while it's blocking.** `/usage-cap` is a slash command, not a tool call, so you can raise
@@ -39,7 +41,7 @@ of the week.
 - **Machine-wide.** Settings live in the plugin's store, survive restarts and apply to every session
   on the machine from the next tool call.
 
-## 🚀 Install
+## Install
 
 At the prompt of a Claude Code session:
 
@@ -50,7 +52,7 @@ At the prompt of a Claude Code session:
 Answer `y` to add the marketplace and pick the **user** scope. The default cap is **84 %**, active
 right away.
 
-## 🎛️ Usage
+## Usage
 
 | Command | What it does |
 |---|---|
@@ -67,7 +69,7 @@ right away.
 usage-guard on: cap 84%, weekly usage 61%, resets Mon 02 Nov, 13:00; this project is not exempt.
 ```
 
-## ⚙️ How it works
+## How it works
 
 ```
 tool call ──▶ guard on? ──no──▶ run
@@ -86,7 +88,7 @@ The plugin is a single hooks module ([`hooks/register.ts`](hooks/register.ts), a
 Claude Code's `tool.call` event. Its only state is the cap, the on/off switch and the exempt list,
 kept in the plugin's own store.
 
-## ❓ FAQ
+## FAQ
 
 **Does it count tokens or call any API?**
 No. It asks Claude Code for the usage figure it already has.
@@ -101,7 +103,7 @@ No. That flag skips permission prompts, not plugin hooks. Use `/usage-cap off` i
 **Can I set different caps per project?**
 Not yet: there is one cap per machine, plus the exempt list.
 
-## 🛠️ Develop
+## Develop
 
 ```bash
 claude plugin validate .   # manifest and module checks
@@ -111,6 +113,6 @@ claude --plugin-dir .      # try it in a session without installing
 
 Built and tested on Claude Code 2.1.310. Issues and PRs welcome.
 
-## 📄 License
+## License
 
 [MIT](LICENSE)
